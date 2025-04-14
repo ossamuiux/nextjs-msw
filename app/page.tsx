@@ -18,7 +18,9 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:9090/user');
+        const response = await fetch(
+          'https://nextjs-msw-three.vercel.app/user'
+        );
         const data = await response.json();
 
         if (!response.ok) {

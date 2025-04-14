@@ -21,7 +21,7 @@ export default function Child({
 
   // 버튼 클릭시 유저 추가
   async function addUser() {
-    const response = await fetch('http://localhost:9090/user', {
+    const response = await fetch('https://nextjs-msw-three.vercel.app/user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

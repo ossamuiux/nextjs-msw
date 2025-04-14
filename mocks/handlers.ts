@@ -5,13 +5,13 @@ let maxId = Math.max(...user.map((item) => item.id));
 
 export const handlers = [
   // GET 요청을 가로채고 가상 응답을 제공
-  http.get('http://localhost:9090/user', async () => {
+  http.get('https://nextjs-msw-three.vercel.app/user', async () => {
     await sleep(200);
 
     // 가상의 응답 데이터 반환
     return HttpResponse.json(user);
   }),
-  http.post('http://localhost:9090/user', async ({ request }) => {
+  http.post('https://nextjs-msw-three.vercel.app/user', async ({ request }) => {
     await sleep(200);
 
     const item: any = await request.json();
