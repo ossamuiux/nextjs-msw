@@ -19,7 +19,7 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://nextjs-msw-three.vercel.app/user'
+          'https://nextjs-msw-three.vercel.app:9090/user'
         );
         const data = await response.json();
 
