@@ -21,20 +21,17 @@ export default function Child({
 
   // 버튼 클릭시 유저 추가
   async function addUser() {
-    const response = await fetch(
-      'https://nextjs-msw-three.vercel.app:9090/user',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: 'ossam',
-          country: 'USA',
-          lang: 'English',
-        }),
-      }
-    );
+    const response = await fetch('/user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: 'ossam',
+        country: 'USA',
+        lang: 'English',
+      }),
+    });
     const newUser = await response.json();
     setData(newUser);
   }

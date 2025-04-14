@@ -8,7 +8,7 @@ const port = 9090; // Mock 서버 포트
 
 app.use(
   cors({
-    origin: 'https://nextjs-msw-three.vercel.app', // 클라이언트 주소
+    origin: 'http://localhost:3000', // 클라이언트 주소
     optionsSuccessStatus: 200,
     credentials: true,
   })
